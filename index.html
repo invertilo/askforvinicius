@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VINICIUS | Tech Innovator &amp; CEO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;family=JetBrains+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #000000;
+            color: #e3e2e7;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border: 1px solid transparent;
+            background: linear-gradient(135deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0) 40%) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(to right, #f2ca50, #d4af37, #ffe088);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .magen-david-bg {
+            position: absolute;
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .terminal-header {
+            background: #1a1b1f;
+            border-bottom: 1px solid #343539;
+        }
+        .radial-glow {
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-container-low": "#1a1b1f",
+                    "inverse-primary": "#735c00",
+                    "surface-container-high": "#292a2e",
+                    "on-surface-variant": "#d0c5af",
+                    "surface-container": "#1e1f23",
+                    "on-secondary-fixed-variant": "#474646",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-secondary-container": "#bab8b7",
+                    "on-primary-fixed": "#241a00",
+                    "surface-container-lowest": "#0d0e12",
+                    "surface-container-highest": "#343539",
+                    "tertiary-fixed": "#e5e2e1",
+                    "on-surface": "#e3e2e7",
+                    "primary-fixed": "#ffe088",
+                    "error-container": "#93000a",
+                    "surface-tint": "#e9c349",
+                    "tertiary": "#d0cdcd",
+                    "surface-dim": "#121317",
+                    "background": "#121317",
+                    "on-primary-container": "#554300",
+                    "outline-variant": "#4d4635",
+                    "on-tertiary-container": "#454544",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "tertiary-container": "#b4b2b2",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "on-secondary": "#313030",
+                    "inverse-surface": "#e3e2e7",
+                    "surface-variant": "#343539",
+                    "secondary": "#c9c6c5",
+                    "primary": "#f2ca50",
+                    "surface-bright": "#38393d",
+                    "inverse-on-surface": "#2f3034",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary": "#313030",
+                    "error": "#ffb4ab",
+                    "on-background": "#e3e2e7",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "outline": "#99907c",
+                    "secondary-container": "#4a4949",
+                    "primary-container": "#d4af37",
+                    "surface": "#121317",
+                    "on-primary": "#3c2f00",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "on-secondary-fixed": "#1c1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "stack-lg": "32px",
+                    "margin-mobile": "20px",
+                    "stack-sm": "8px",
+                    "margin-desktop": "80px",
+                    "gutter": "24px",
+                    "section-gap": "120px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Outfit"],
+                    "headline-xl-mobile": ["Outfit"],
+                    "headline-lg": ["Outfit"],
+                    "body-sm": ["Plus Jakarta Sans"],
+                    "headline-md": ["Outfit"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-sm": ["Outfit"],
+                    "headline-xl": ["Outfit"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "mono": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-xl-mobile": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- B"H Mark -->
+<div class="fixed top-4 right-8 z-[60] font-label-caps text-label-caps text-on-surface-variant/40 select-none">
+        ב"ה
+    </div>
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 md:px-margin-desktop h-20 bg-surface/30 backdrop-blur-2xl border-b border-white/10 shadow-[0_0_20px_rgba(212,175,55,0.05)]">
+<div class="font-headline-sm text-headline-sm font-bold tracking-tighter text-primary">VINICIUS</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#vision">VISION</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#projects">PROJECTS</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#experience">EXPERIENCE</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#skills">SKILLS</a>
+</nav>
+<button class="font-label-caps text-label-caps text-primary border border-primary px-6 py-2 hover:bg-primary/5 transition-all duration-300">CONTACT</button>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col items-center justify-center pt-20 px-margin-mobile md:px-margin-desktop radial-glow">
+<div class="magen-david-bg top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<span class="text-[400px]">✡</span>
+</div>
+<div class="z-10 text-center max-w-4xl">
+<div class="inline-flex items-center gap-2 bg-surface-container-high px-4 py-1.5 rounded-full mb-8 border border-white/5">
+<span class="w-2 h-2 rounded-full bg-[#4ade80] animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Disponible para proyectos estratégicos</span>
+</div>
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-6">
+                    Hola, soy <span class="gold-gradient-text">Vinicius</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                    Visionario tecnológico y CEO. Especializado en la convergencia entre bienes raíces de lujo, automatización avanzada y ecosistemas digitales escalables.
+                </p>
+<div class="relative w-48 h-48 mx-auto mb-12">
+<div class="absolute inset-0 bg-primary/20 blur-2xl rounded-full"></div>
+<div class="relative w-full h-full rounded-full border-2 border-primary/30 p-1 bg-black overflow-hidden">
+<img alt="Vinicius Profile" class="w-full h-full object-cover rounded-full filter grayscale hover:grayscale-0 transition-all duration-700" data-alt="A professional, high-end portrait of a confident tech CEO in a minimalist dark studio setting. The lighting is dramatic and cinematic, highlighting his facial features with golden rim light against a pitch-black background. The overall aesthetic is elite, powerful, and modern, aligning with a dark premium portfolio theme." src="xd.png"/>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="bg-primary text-black font-label-caps text-label-caps px-10 py-4 font-bold hover:scale-[1.02] transition-transform">EXPLORAR VISIÓN</button>
+<button class="border border-primary text-primary font-label-caps text-label-caps px-10 py-4 hover:bg-primary/5 transition-all">CONSULTORÍA</button>
+</div>
+</div>
+</section>
+<!-- Work Philosophy -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="vision">
+<h2 class="font-headline-md text-headline-md text-center mb-16 uppercase tracking-widest text-on-surface-variant">Filosofía de Trabajo</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Efficiency -->
+<div class="glass-card p-10 flex flex-col items-start gap-stack-md group">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-lg group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">bolt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Eficiencia Extrema</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Optimización radical de procesos operativos mediante algoritmos de decisión y flujos de trabajo inteligentes.</p>
+</div>
+<!-- APIs -->
+<div class="glass-card p-10 flex flex-col items-start gap-stack-md group">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-lg group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">api</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Conectividad Total</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Integración fluida de sistemas heterogéneos a través de APIs robustas y arquitecturas orientadas a servicios.</p>
+</div>
+<!-- SaaS -->
+<div class="glass-card p-10 flex flex-col items-start gap-stack-md group">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-lg group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">cloud_done</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Escalabilidad SaaS</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Desarrollo de plataformas basadas en la nube diseñadas para el crecimiento exponencial y la resiliencia.</p>
+</div>
+</div>
+</section>
+<!-- Mercav Project -->
+<section class="py-section-gap bg-surface-container-lowest relative overflow-hidden" id="projects">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="z-10">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">PROYECTO DESTACADO</span>
+<h2 class="font-headline-lg text-headline-lg mb-8">Mercav | <span class="text-on-surface-variant/50">Ecosistema Digital</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                        Una plataforma revolucionaria que redefine la interacción comercial. Mercav integra múltiples capas de servicios digitales en una sola interfaz cohesiva y potente.
+                    </p>
+
+<div class="glass-card rounded-xl p-6 mb-10 border-white/10">
+    <p class="font-label-caps text-label-caps text-on-surface-variant mb-4">Cuenta regresiva · 13 JUN 2026</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="mercav-countdown" aria-label="Cuenta regresiva al 13 de junio de 2026">
+        <div class="bg-surface-variant/30 rounded-lg p-4 text-center border border-white/5">
+            <div class="font-headline-md text-headline-md text-on-surface" id="cd-days">--</div>
+            <div class="font-label-caps text-label-caps text-on-surface-variant">DÍAS</div>
+        </div>
+        <div class="bg-surface-variant/30 rounded-lg p-4 text-center border border-white/5">
+            <div class="font-headline-md text-headline-md text-on-surface" id="cd-hours">--</div>
+            <div class="font-label-caps text-label-caps text-on-surface-variant">HORAS</div>
+        </div>
+        <div class="bg-surface-variant/30 rounded-lg p-4 text-center border border-white/5">
+            <div class="font-headline-md text-headline-md text-on-surface" id="cd-minutes">--</div>
+            <div class="font-label-caps text-label-caps text-on-surface-variant">MINUTOS</div>
+        </div>
+        <div class="bg-surface-variant/30 rounded-lg p-4 text-center border border-white/5">
+            <div class="font-headline-md text-headline-md text-on-surface" id="cd-seconds">--</div>
+            <div class="font-label-caps text-label-caps text-on-surface-variant">SEGUNDOS</div>
+        </div>
+    </div>
+</div>
+
+<div class="grid grid-cols-2 gap-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">ads_click</span>
+<div>
+<h4 class="font-headline-sm text-[18px] text-on-surface">Ads System</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Publicidad segmentada por IA.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">dry_cleaning</span>
+<div>
+<h4 class="font-headline-sm text-[18px] text-on-surface">Servicios</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Directorio elite de profesionales.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">work</span>
+<div>
+<h4 class="font-headline-sm text-[18px] text-on-surface">Jobs Hub</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Conexión de talento global.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">groups</span>
+<div>
+<h4 class="font-headline-sm text-[18px] text-on-surface">Community</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Foros y redes de networking.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<div class="glass-card rounded-xl p-2 shadow-2xl border-white/10 overflow-hidden transform group-hover:scale-[1.01] transition-transform duration-500">
+<div class="terminal-header h-8 flex items-center gap-1.5 px-4">
+<div class="w-3 h-3 rounded-full bg-error/40"></div>
+<div class="w-3 h-3 rounded-full bg-primary/40"></div>
+<div class="w-3 h-3 rounded-full bg-[#4ade80]/40"></div>
+</div>
+<img alt="Mercav" class="w-full aspect-video object-cover" src="mercavlat.png" loading="lazy"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Century 21 & Automation -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="flex flex-col md:flex-row items-center gap-20">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<div class="relative">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent blur-3xl opacity-30"></div>
+<img alt="Century 21 Real Estate" class="relative w-full aspect-[4/5] object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A cinematic low-angle shot of a modern, luxury high-rise architectural building against a dramatic night sky. The building features sleek glass panels that reflect city lights, creating a sense of elite real estate and professional success. The lighting is cold and blue-toned, contrasted with warm golden glows from the interior windows, creating a premium consulting and investment atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACIbxCkHnO7lOlp54PJX4BQk776x4r_zzY6uT5PD4s959jHbvWhrHk-_GnxqrE0xmz9PYNRhO3jS5qYpuI9ztZrGjFf9YNR-Hg2qBVanPHvkNCdVRnmPnVs4DovZ_EmN40yvU8cuu_gy7tGAcP51r_5SQVArPNu64ejwb0G3wKuvNGwdr5yxHpb4kqJcT55jk9y3iM0lKNdsd5dHaFodALnGuiz6WTZg_RyBd3BNpsyvjeD2Kn6ITP1BvXf6-sLZcaGqq8vaU2wvY"/>
+<div class="absolute -bottom-10 -right-10 bg-primary px-8 py-10 hidden md:block">
+<p class="font-headline-md text-headline-md text-black leading-tight">Elite<br/>Consulting</p>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2">
+<h2 class="font-headline-lg text-headline-lg mb-6 uppercase tracking-tight">Century 21<br/><span class="text-primary">Investment &amp; Strategy</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Liderando la transformación digital en el sector inmobiliario de lujo. Fusionamos la estabilidad de los bienes raíces con la precisión de la automatización robótica de procesos (RPA).
+                    </p>
+<ul class="space-y-6">
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">Modelos de valoración predictiva mediante Big Data.</span>
+</li>
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">Sistemas de prospección automatizada para HNWI.</span>
+</li>
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">Gestión de carteras inmobiliarias de alto rendimiento.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Skills & Tech Terminal -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="skills">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Tech Stack &amp; Mastery</h2>
+<div class="flex flex-wrap justify-center gap-4">
+<span class="px-4 py-2 bg-surface-variant font-label-caps text-label-caps text-on-surface-variant border border-white/5">PYTHON</span>
+<span class="px-4 py-2 bg-surface-variant font-label-caps text-label-caps text-on-surface-variant border border-white/5">SQL</span>
+<span class="px-4 py-2 bg-surface-variant font-label-caps text-label-caps text-on-surface-variant border border-white/5">JAVASCRIPT</span>
+<span class="px-4 py-2 bg-surface-variant font-label-caps text-label-caps text-on-surface-variant border border-white/5">LUA</span>
+<span class="px-4 py-2 bg-surface-variant font-label-caps text-label-caps text-on-surface-variant border border-white/5">TELEGRAM API</span>
+<span class="px-4 py-2 bg-surface-variant font-label-caps text-label-caps text-on-surface-variant border border-white/5">WHATSAPP CLOUD API</span>
+</div>
+</div>
+<div class="glass-card max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
+<div class="terminal-header h-10 flex items-center justify-between px-6">
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+<div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+<div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+</div>
+<div class="text-on-surface-variant font-mono text-[12px] opacity-50">vinicius.py — 80x24</div>
+</div>
+<div class="p-8 font-mono text-body-sm leading-relaxed overflow-x-auto bg-[#0A0A0A]">
+<p class="text-[#c9c6c5] mb-2"><span class="text-primary">class</span> <span class="text-on-primary-fixed-variant">Innovator</span>(<span class="text-on-primary-fixed-variant">CEO</span>):</p>
+<p class="text-[#c9c6c5] ml-4"><span class="text-primary">def</span> <span class="text-on-primary-fixed-variant">__init__</span>(self):</p>
+<p class="text-[#c9c6c5] ml-8">self.vision = <span class="text-[#d4af37]">"Ecosistemas Escalables"</span></p>
+<p class="text-[#c9c6c5] ml-8">self.tools = [<span class="text-[#d4af37]">"Python"</span>, <span class="text-[#d4af37]">"AI"</span>, <span class="text-[#d4af37]">"Automation"</span>]</p>
+<p class="text-[#c9c6c5] ml-8">self.status = <span class="text-[#4ade80]">"Optimizing..."</span></p>
+<p class="text-on-surface-variant/30 mt-4"># Comprobando integridad del sistema</p>
+<p class="text-[#c9c6c5] ml-4"><span class="text-primary">def</span> <span class="text-on-primary-fixed-variant">scale_business</span>(self, platform):</p>
+<p class="text-[#c9c6c5] ml-8"><span class="text-primary">return</span> f<span class="text-[#d4af37]">"Transforming {platform} with automation."</span></p>
+<div class="mt-4 flex gap-2">
+<span class="text-[#4ade80]">$</span>
+<span class="animate-pulse w-2 h-5 bg-primary"></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Timeline -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="experience">
+<h2 class="font-headline-md text-headline-md text-center mb-16">Trayectoria Profesional</h2>
+<div class="relative max-w-3xl mx-auto">
+<!-- Vertical Line -->
+<div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-[1px] bg-white/10 -translate-x-1/2"></div>
+<div class="space-y-20">
+<!-- Event 1 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full">
+<div class="md:w-[45%] mb-4 md:mb-0 md:text-right">
+<span class="font-label-caps text-label-caps text-primary">2023 - Presente</span>
+<h3 class="font-headline-sm text-headline-sm mt-2">CEO @ MERCAV</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Liderando el desarrollo técnico y estratégico de un ecosistema digital multi-servicio.</p>
+</div>
+<div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary rounded-full -translate-x-1/2 shadow-[0_0_10px_rgba(212,175,55,0.8)] z-10"></div>
+<div class="md:w-[45%]"></div>
+</div>
+<!-- Event 2 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full">
+<div class="md:w-[45%]"></div>
+<div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary/30 border border-primary rounded-full -translate-x-1/2 z-10"></div>
+<div class="md:w-[45%] mt-4 md:mt-0">
+<span class="font-label-caps text-label-caps text-primary">2021 - 2023</span>
+<h3 class="font-headline-sm text-headline-sm mt-2">Senior Consultant @ Century 21</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Implementación de soluciones RPA para la gestión de leads y análisis de mercado inmobiliario.</p>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full">
+<div class="md:w-[45%] mb-4 md:mb-0 md:text-right">
+<span class="font-label-caps text-label-caps text-primary">2019 - 2021</span>
+<h3 class="font-headline-sm text-headline-sm mt-2">Automation Lead</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Desarrollo de bots especializados en scraping y automatización de marketing en Telegram y WhatsApp.</p>
+</div>
+<div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary/30 border border-primary rounded-full -translate-x-1/2 z-10"></div>
+<div class="md:w-[45%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="glass-card p-12">
+<h2 class="font-headline-md text-headline-md mb-6 uppercase tracking-tight">Hablemos de <br/><span class="text-primary">el futuro</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                        ¿Tienes un proyecto que requiere visión técnica y ejecución de élite? Conectemos para explorar cómo mis habilidades pueden potenciar tu visión.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-white/5 flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant opacity-50">EMAIL</p>
+<p class="font-body-md text-body-md">contacto@askforvinicius.lat</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-white/5 flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-primary">near_me</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant opacity-50">TELEGRAM</p>
+<p class="font-body-md text-body-md">@invertilo</p>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-12">
+<form class="space-y-6">
+<div class="grid grid-cols-1 gap-6">
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">NOMBRE</label>
+<input class="w-full bg-surface-container-high border-none text-on-surface px-4 py-4 focus:ring-1 focus:ring-primary transition-all" placeholder="Tu nombre completo" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">EMAIL</label>
+<input class="w-full bg-surface-container-high border-none text-on-surface px-4 py-4 focus:ring-1 focus:ring-primary transition-all" placeholder="hola@empresa.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">MENSAJE</label>
+<textarea class="w-full bg-surface-container-high border-none text-on-surface px-4 py-4 focus:ring-1 focus:ring-primary transition-all" placeholder="Cuéntame sobre tu proyecto..." rows="4"></textarea>
+</div>
+</div>
+<button class="w-full bg-primary text-black font-label-caps text-label-caps py-4 font-bold hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] transition-all" type="submit">ENVIAR MENSAJE</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-stack-md bg-surface-container-lowest border-t border-outline-variant">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="font-headline-sm text-headline-sm text-primary flex items-center gap-2">
+                VINICIUS
+                <span class="text-[20px] opacity-40">✡</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/60">בס"ד - Con la ayuda del Cielo</p>
+</div>
+<div class="flex flex-col items-center gap-4">
+<nav class="flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">PRIVACY POLICY</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">TERMS OF SERVICE</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">MAINTENANCE</a>
+</nav>
+<p class="font-body-sm text-body-sm text-on-surface-variant/40">© 2024 VINICIUS. ALL RIGHTS RESERVED. ב"ה</p>
+</div>
+<div class="flex gap-6">
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-primary/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">terminal</span>
+</a>
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-primary/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">database</span>
+</a>
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-primary/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">code</span>
+</a>
+</div>
+</footer>
+<script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+        // Countdown: June 13, 2026 (local time)
+        (function initMercavCountdown() {
+            const root = document.getElementById('mercav-countdown');
+            if (!root) return;
+
+            const target = new Date('2026-06-13T00:00:00');
+            if (isNaN(target.getTime())) return;
+
+            const elDays = document.getElementById('cd-days');
+            const elHours = document.getElementById('cd-hours');
+            const elMinutes = document.getElementById('cd-minutes');
+            const elSeconds = document.getElementById('cd-seconds');
+
+            const pad2 = (n) => String(n).padStart(2, '0');
+
+            function render() {
+                const now = new Date();
+                let diffMs = target.getTime() - now.getTime();
+                if (diffMs < 0) diffMs = 0;
+
+                const totalSeconds = Math.floor(diffMs / 1000);
+                const days = Math.floor(totalSeconds / 86400);
+                const hours = Math.floor((totalSeconds % 86400) / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                const seconds = totalSeconds % 60;
+
+                if (elDays) elDays.textContent = String(days);
+                if (elHours) elHours.textContent = pad2(hours);
+                if (elMinutes) elMinutes.textContent = pad2(minutes);
+                if (elSeconds) elSeconds.textContent = pad2(seconds);
+            }
+
+            render();
+            setInterval(render, 1000);
+        })();
+    </script>
+</body></html>

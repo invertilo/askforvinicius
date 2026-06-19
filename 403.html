@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>403 - Acceso Denegado | Vinicius</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="mercav.png">
+    <style>
+        :root {
+            --bg-base: #060607;
+            --bg-darker: #030304;
+            --gold-primary: #D4AF37;
+            --gold-gradient: linear-gradient(135deg, #FFE89C 0%, #D4AF37 50%, #8C6F1B 100%);
+            --gold-glow: 0 0 25px rgba(212, 175, 55, 0.18);
+            --text-primary: #FFFFFF;
+            --text-secondary: #A1A1AA;
+            --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            background-color: var(--bg-base);
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 600px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: 800;
+            font-family: var(--font-heading);
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            line-height: 1;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-family: var(--font-heading);
+            margin-bottom: 15px;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .error-message {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .error-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: var(--gold-primary);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--gold-gradient);
+            color: #000;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--gold-primary);
+            color: var(--gold-primary);
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: var(--gold-primary);
+            margin: 0 auto 30px;
+            box-shadow: var(--gold-glow);
+        }
+
+        .footer-text {
+            margin-top: 50px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 640px) {
+            .error-code {
+                font-size: 80px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .error-message {
+                font-size: 1rem;
+            }
+
+            .btn-container {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="error-container">
+        <div class="error-icon">
+            <i class="fas fa-lock"></i>
+        </div>
+        
+        <div class="error-code">403</div>
+        
+        <h1>Acceso Denegado</h1>
+        
+        <div class="divider"></div>
+        
+        <p class="error-message">
+            Lo sentimos, no tienes permiso para acceder a este recurso. El acceso a este archivo o directorio ha sido prohibido.
+        </p>
+        
+        <div class="btn-container">
+            <a href="/" class="btn btn-primary">
+                <i class="fas fa-home"></i>
+                Volver al Inicio
+            </a>
+            <a href="/#contacto" class="btn btn-secondary">
+                <i class="fas fa-question-circle"></i>
+                Contactar Soporte
+            </a>
+        </div>
+        
+        <div class="footer-text">
+            <p>Si crees que esto es un error, por favor <a href="/#contacto" style="color: var(--gold-primary); text-decoration: none;">ponte en contacto conmigo</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
