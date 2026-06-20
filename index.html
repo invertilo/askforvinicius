@@ -233,29 +233,6 @@
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">
                         Una plataforma revolucionaria que redefine la interacción comercial. Mercav integra múltiples capas de servicios digitales en una sola interfaz cohesiva y potente.
                     </p>
-
-<div class="glass-card rounded-xl p-6 mb-10 border-white/10">
-    <p class="font-label-caps text-label-caps text-on-surface-variant mb-4">Cuenta regresiva · 13 JUN 2026</p>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="mercav-countdown" aria-label="Cuenta regresiva al 13 de junio de 2026">
-        <div class="bg-surface-variant/30 rounded-lg p-4 text-center border border-white/5">
-            <div class="font-headline-md text-headline-md text-on-surface" id="cd-days">--</div>
-            <div class="font-label-caps text-label-caps text-on-surface-variant">DÍAS</div>
-        </div>
-        <div class="bg-surface-variant/30 rounded-lg p-4 text-center border border-white/5">
-            <div class="font-headline-md text-headline-md text-on-surface" id="cd-hours">--</div>
-            <div class="font-label-caps text-label-caps text-on-surface-variant">HORAS</div>
-        </div>
-        <div class="bg-surface-variant/30 rounded-lg p-4 text-center border border-white/5">
-            <div class="font-headline-md text-headline-md text-on-surface" id="cd-minutes">--</div>
-            <div class="font-label-caps text-label-caps text-on-surface-variant">MINUTOS</div>
-        </div>
-        <div class="bg-surface-variant/30 rounded-lg p-4 text-center border border-white/5">
-            <div class="font-headline-md text-headline-md text-on-surface" id="cd-seconds">--</div>
-            <div class="font-label-caps text-label-caps text-on-surface-variant">SEGUNDOS</div>
-        </div>
-    </div>
-</div>
-
 <div class="grid grid-cols-2 gap-8">
 <div class="flex items-start gap-4">
 <span class="material-symbols-outlined text-primary">ads_click</span>
@@ -295,7 +272,7 @@
 <div class="w-3 h-3 rounded-full bg-primary/40"></div>
 <div class="w-3 h-3 rounded-full bg-[#4ade80]/40"></div>
 </div>
-<img alt="Mercav" class="w-full aspect-video object-cover" src="mercavlat.png" loading="lazy"/>
+<img alt="Mercav Interface Mockup" class="w-full aspect-video object-cover" data-alt="A sophisticated digital dashboard interface for a premium business ecosystem. The screen displays data visualizations, user management modules, and sleek navigation menus in a dark-mode palette with gold accent highlights. The overall aesthetic is professional, clean, and futuristic, showcasing advanced software engineering and UI design." src="mercavlat.png"/>
 </div>
 </div>
 </div>
@@ -306,7 +283,7 @@
 <div class="w-full md:w-1/2 order-2 md:order-1">
 <div class="relative">
 <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent blur-3xl opacity-30"></div>
-<img alt="Century 21 Real Estate" class="relative w-full aspect-[4/5] object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A cinematic low-angle shot of a modern, luxury high-rise architectural building against a dramatic night sky. The building features sleek glass panels that reflect city lights, creating a sense of elite real estate and professional success. The lighting is cold and blue-toned, contrasted with warm golden glows from the interior windows, creating a premium consulting and investment atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACIbxCkHnO7lOlp54PJX4BQk776x4r_zzY6uT5PD4s959jHbvWhrHk-_GnxqrE0xmz9PYNRhO3jS5qYpuI9ztZrGjFf9YNR-Hg2qBVanPHvkNCdVRnmPnVs4DovZ_EmN40yvU8cuu_gy7tGAcP51r_5SQVArPNu64ejwb0G3wKuvNGwdr5yxHpb4kqJcT55jk9y3iM0lKNdsd5dHaFodALnGuiz6WTZg_RyBd3BNpsyvjeD2Kn6ITP1BvXf6-sLZcaGqq8vaU2wvY"/>
+<img alt="Century 21 Real Estate" class="relative w-full aspect-[4/5] object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A cinematic low-angle shot of a modern, luxury high-rise architectural building against a dramatic night sky. The building features sleek glass panels that reflect city lights, creating a sense of elite real estate and professional success. The lighting is cold and blue-toned, contrasted with warm golden glows from the interior windows, creating a premium consulting and investment atmosphere." src="c21.jpg"/>
 <div class="absolute -bottom-10 -right-10 bg-primary px-8 py-10 hidden md:block">
 <p class="font-headline-md text-headline-md text-black leading-tight">Elite<br/>Consulting</p>
 </div>
@@ -523,41 +500,6 @@
             section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
             observer.observe(section);
         });
-
-        // Countdown: June 13, 2026 (local time)
-        (function initMercavCountdown() {
-            const root = document.getElementById('mercav-countdown');
-            if (!root) return;
-
-            const target = new Date('2026-06-13T00:00:00');
-            if (isNaN(target.getTime())) return;
-
-            const elDays = document.getElementById('cd-days');
-            const elHours = document.getElementById('cd-hours');
-            const elMinutes = document.getElementById('cd-minutes');
-            const elSeconds = document.getElementById('cd-seconds');
-
-            const pad2 = (n) => String(n).padStart(2, '0');
-
-            function render() {
-                const now = new Date();
-                let diffMs = target.getTime() - now.getTime();
-                if (diffMs < 0) diffMs = 0;
-
-                const totalSeconds = Math.floor(diffMs / 1000);
-                const days = Math.floor(totalSeconds / 86400);
-                const hours = Math.floor((totalSeconds % 86400) / 3600);
-                const minutes = Math.floor((totalSeconds % 3600) / 60);
-                const seconds = totalSeconds % 60;
-
-                if (elDays) elDays.textContent = String(days);
-                if (elHours) elHours.textContent = pad2(hours);
-                if (elMinutes) elMinutes.textContent = pad2(minutes);
-                if (elSeconds) elSeconds.textContent = pad2(seconds);
-            }
-
-            render();
-            setInterval(render, 1000);
-        })();
     </script>
 </body></html>
+
